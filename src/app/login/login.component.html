@@ -1,0 +1,36 @@
+<!-- Resources -->
+  <div align="center">
+    <h2>Sign In</h2>
+    <p>Enter your informations to log in</p>
+
+    <img src="./assets/logo.webp" #selection>
+  </div>
+
+  <div class="card-container" style="border: 1px solid #00000017;padding: 5%;border-radius: 5px;min-width: 400px;">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+
+      <div class="input-div">
+       <input class="form-control" type="email" id="inputEmail" formControlName="email" [ngClass]="{'is-invalid': submitted && f.email.errors}" placeholder="Please enter your email" required="" autofocus="" >
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+         <div *ngIf="f.email.errors.required">Enter email please</div>
+         <div *ngIf="f.email.errors.email">Email must be valid</div>
+        </div>
+      </div>
+
+      <div class="input-div">
+       <input  class="form-control" type="password" id="inputPassword" formControlName="password" [ngClass]="{'is-invalid': submitted && f.password.errors}" placeholder="Please enter your password" required="" >
+       <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+         <div *ngIf="f.password.errors.required">Enter password please</div>
+        </div> 
+      </div>
+
+      <div class="input-div">
+        <button class="card card-small button" type="submit" tabindex="0" style="float: right;">
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Sign In</span>
+        </button>
+      </div>
+      
+    </form>
+
+  </div>

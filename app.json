@@ -1,0 +1,6 @@
+{
+  "name": "test ejara frontend ",
+  "description": "A basic frntend application using angular",
+  "repository": "https://github.com/keljon/ejara/test-ejara-frontend",
+  "keywords": ["node", "angular"]
+}
